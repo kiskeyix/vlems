@@ -1,0 +1,17 @@
+= Introduction =
+
+vlems - Virtual LEMS
+"Your own system administrator"
+
+Currently works only for Ubuntu Hardy. 
+
+= Installation =
+
+Open a terminal and do the following commands:
+
+1. sudo apt-get install cfengine2 git-core
+2. git clone http://git.kiskeyix.org/git/vlems
+3. sudo cp vlems/inputs/* /etc/cfengine/
+4. sudo /usr/sbin/cfagent -qv
+
+From then on the system will maintain itself.

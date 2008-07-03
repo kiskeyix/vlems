@@ -1,0 +1,18 @@
+= Introducción =
+
+vlems - Virtual LEMS
+"Tu propio administrador de systemas"
+
+Actualmente solo esta hecho para Ubuntu Hardy.
+http://ubuntu.com
+
+= Instalación =
+
+Abre una terminal y ejecuta los comandos siguientes:
+
+1. sudo apt-get install cfengine2 git-core
+2. git clone http://git.kiskeyix.org/git/vlems
+3. sudo cp vlems/inputs/* /etc/cfengine/
+4. sudo /usr/sbin/cfagent -qv
+
+De ahí en adelante vlems se mantiene a si mismo.
