@@ -1,0 +1,53 @@
+#########################################################
+#                                                       #
+#                 cf.groups config file                 #
+#                                                       #
+#########################################################
+
+groups:
+
+    #
+    # Define some groups
+    #
+    
+    # TODO find a way to re-use that variable here. can't use ${cfengine_server}
+    # we are not relying on DNS resolution because for DMZ boxes this creates problems
+    CfengineServers = ( wiz 10_1_1_6 2007_a_b__6 www_kiskeyix_org 66_114_86_65  )
+
+    # hosts which should be running ssh:
+    sshservers = ( unix )
+    
+    # super sets:
+    unix = ( solaris linux ultrix hpux sunos sunos_5_10 solarisx86 )
+
+    sunos = ( sunos sunos_5_10 solaris solarisx86 )
+    
+    # the almighty of all supersets:
+    production = ( any )
+    
+    # these are the supported distributions that we care for, they are systems for which
+    # we have a local RPM repositories and we will be installing programs with apt-get
+    supported_distros = ( debian redhat centos fedora )
+
+    # makes it easy to manage distros
+    rpm_distros = ( redhat centos fedora )
+
+    deb_distros = ( debian ubuntu xandros )
+
+# ------------------------------------------------------------------------- #
+
+    # general purpose classes:
+    on_the_hour    = ( Min00_05 Min05_10 Min10_15 Min15_20 Min20_25 )
+    
+    all = ( Hr00.on_the_hour )
+
+    peaktime     = ( Hr10 Hr11 Hr12 Hr13 Hr14 Hr15 )
+
+    half_hour     = ( Min30_35 Min35_40 Min40_45 Min45_50 Min50_55 )
+
+    day_time      = ( Hr07 Hr08 Hr09 Hr10 Hr11 Hr12 Hr13 Hr14 Hr15 Hr16 Hr17 Hr18 )
+
+    check_integrity = ( Hr06.OnTheHour )
+
+    x86 = ( i386 i486 i586 i686 )
+
