@@ -31,7 +31,7 @@ control:
         cfrunCommand = ( /var/cfengine/bin/cfagent )
 
     debian::
-        cfrunCommand = ( /usr/sbin/cfagent )
+        cfrunCommand = ( /var/lib/cfengine2/bin/cfagent )
 
     !CfengineServers::
         cfengine_server = ( 66.114.86.65 )
