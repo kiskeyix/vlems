@@ -1,0 +1,135 @@
+# vi:ft=cfengine:
+#########################################################
+#                                                       #
+#                   cf.main config file                 #
+#                                                       #
+#########################################################
+# Created: 2005-09-13 12:04 EDT 
+# Modified: 2008-07-12 12:29 EDT 
+#
+# Luis Mondesi <lemsx1@gmail.com> 
+#
+# Description: main section for cfagent.conf
+
+control:
+    any::
+        # update.conf also defines this same variable. we just makes sure 
+        # that its updated correctly here
+        AllowRedefinitionOf = ( 
+            cfengine_server domain
+            pkg_base_url pkg_host_is pkg_bin pkg_bin distro pkg_mgr 
+            AddInstallable  cfrunCommand
+            )
+        #ChecksumDatabase = ( /var/cfengine/checksum.db )
+        # set this to true when the database needs updating for valid reasons
+        ChecksumUpdates = ( false )
+        Split           = ( | )
+            
+        domain = ( kiskeyix.org )
+    
+    !debian::
+        cfrunCommand = ( /var/cfengine/bin/cfagent )
+
+    debian::
+        cfrunCommand = ( /usr/sbin/cfagent )
+
+    !CfengineServers::
+        cfengine_server = ( 66.114.86.65 )
+
+    CfengineServers::
+        Syslog = ( on )
+        cfengine_server = ( localhost )
+
+    any::
+        LogAllConnections = ( true )
+        access = ( root )       # Only root is allowed to run cfengine programs
+        site = ( kiskeyix )
+        sysadm  = ( lemsx1@gmail.com )
+        smtpserver = ( localhost )
+        # size of a require file. default is 1k (1000 bytes)
+        sensiblesize  = ( 1000 )
+        # number of files in a required directory (default 2):
+        # if the directory contains fewer than the value of sensiblecount files, a warning is issued
+        sensiblecount = ( 2 )
+        # ignore the stupid limit in file editing
+        editfilesize  = ( 0 )
+        
+        moduledirectory = ( /var/cfengine/modules )
+        
+        actionsequence = (
+            module:lsb_classes
+            module:mailforroot
+            module:daylight_savings
+            shellcommands
+            resolve
+            processes 
+            tidy
+            mountall            # mount filesystems in fstab
+            mountinfo           # scan mounted filesystems
+            packages            # install RPMs/Debs and other packages
+            copy 
+            files 
+            links
+            directories 
+            disable
+            editfiles
+            shellcommands       # yes, we need to run it after dynamic classes were defined
+            )
+        IfElapsed = ( 10 )
+        ExpireAfter = ( 120 )
+        master_files  = ( /var/cfengine/masterfiles )
+
+        # installable classes allow cfengine to know that a given classes might be defined
+        # later:
+        AddInstallable = (
+            # lsb release:
+            sid unstable stable testing sarge etch woody oldstable
+            ubuntu hoary breezy dapper edgy gutsy hardy 6_10 6_06 bordeaux 1_3
+            # packages:
+            needs_apt needs_ntp needs_cups needs_lsb needs_samba needs_tidy needs_perltidy
+            needs_nrpe needs_arcusse
+            # shellcommands|restarting services:
+            needs_nrpe_restarted needs_smb_restarted needs_sshd_restarted needs_ntpd_restarted
+            needs_cfengine_restarted
+            # check file sizes:
+            rootmaillarge
+            # daylight savings
+            dstsunapr12007 dstsunmar112007
+            needs_root_folder
+            needs_cron_restarted
+            needs_cron_reloaded
+            needs_networking_restarted
+            )
+
+    unix.!debian::
+        workdir = ( /var/cfengine )
+    
+    debian::
+        workdir = ( /var/lib/cfengine2 )
+
+    # packages:
+    
+    any::
+        pkg_base_url    = ( http://www.kiskeyix.org )
+        pkg_host_is     = ( internal )
+
+    linux.!debian::
+        pkg_bin     = ( /bin/rpm )
+        pkg_mgr     = ( rpm )
+
+    debian::
+        pkg_bin     = ( /usr/bin/apt-get )
+        pkg_mgr     = ( dpkg )
+
+    sunos::
+        pkg_bin     = ( /opt/csw/bin/pkg-get )
+        pkg_mgr     = ( pkgadd )
+
+    debian::
+        ntp_pkg     = ( ntp-server )
+        lsb_pkg     = ( lsb-core )
+        apt_pkg     = ( apt_0.6.43.3ubuntu2_i386.deb )
+
+    any::
+        apt_bin     = ( /usr/bin/apt-get )
+        apt_conf    = ( ${apt_host_is}.${distro}.list )
