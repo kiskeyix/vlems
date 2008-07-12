@@ -2,4 +2,4 @@
 shellcommands:
     # update our inputs files
     debian::
-        "/bin/true; cd /var/lib/cfengine2/vlems && /usr/bin/git pull > /dev/null && /bin/cp /var/lib/cfengine2/vlems/inputs/* /etc/cfengine/" ifelapsed=1
+        "/bin/true" ifelapsed=1440
