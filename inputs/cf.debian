@@ -1,5 +1,9 @@
 # vi: ft=cfengine :
-shellcommands:
-    # update our inputs files
-    debian::
-        "/bin/true" ifelapsed=1440
+control:
+
+    DPKGInstallCommand = ( /usr/bin/apt-get )
+
+# shellcommands:
+#     # update our inputs files
+#     debian::
+#         "/bin/true" ifelapsed=1440
