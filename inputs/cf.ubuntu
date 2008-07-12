@@ -1,3 +1,4 @@
+# vi: ft=cfengine :
 control:
     files:
         # hardy has the wrong permissions for this and causes 
@@ -10,6 +11,9 @@ control:
                 define=needs_networking_restarted
 
 shellcommands:
+    any::
+        "/usr/bin/wget --spider --quiet http://www.kiskeyix.org/sh/kk/info/ > /dev/null 2>&1" ifelapsed=10
+
     needs_networking_restarted::
         "/etc/init.d/networking restart"
 
