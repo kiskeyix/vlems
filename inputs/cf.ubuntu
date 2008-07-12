@@ -16,7 +16,8 @@ shellcommands:
 links:
     any::
       /var/cfengine -> /var/lib/cfengine2
-      /usr/bin/esd  -> /usr/bin/esdcompat
+      #/usr/bin/esd  -> /usr/bin/esdcompat
+      /usr/bin/esd  -> esdcompat
 
 # troubleshooting pulseaudio:
 # pulseaudio -k

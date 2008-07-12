@@ -25,7 +25,7 @@ control:
         ChecksumUpdates = ( false )
         Split           = ( | )
             
-        domain = ( kiskeyix.org )
+        domain = ( i.kiskeyix.org )
     
     !debian::
         cfrunCommand = ( /var/cfengine/bin/cfagent )
