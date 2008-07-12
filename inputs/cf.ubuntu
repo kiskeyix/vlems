@@ -2,7 +2,7 @@
 #control:
 
 packages:
-    vim-gnome pkgmgr=dpkg cmp=gt version=1 action=install
+    vim-gnome pkgmgr=dpkg cmp=ge version=7.0 action=install
 
 files:
         # hardy has the wrong permissions for this and causes 
