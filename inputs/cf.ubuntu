@@ -2,18 +2,18 @@
 #control:
 
 packages:
-    vim-gnome               pkgmgr=dpkg action=install
-    libflashsupport         pkgmgr=dpkg action=install
-    pulseaudio-module-x11   pkgmgr=dpkg action=install
-    pulseaudio-module-gconf pkgmgr=dpkg action=install
-    pulseaudio-module-hal   pkgmgr=dpkg action=install
-    libk3b2-extracodecs     pkgmgr=dpkg action=install
-    toolame                 pkgmgr=dpkg action=install
-    policykit-gnome         pkgmgr=dpkg action=install
-    libpam-cracklib         pkgmgr=dpkg action=install
-    amarok-xine             pkgmgr=dpkg action=install
-    ipod-convenience        pkgmgr=dpkg action=install
-    xawtv                   pkgmgr=dpkg action=install
+    vim-gnome                               pkgmgr=dpkg action=install
+    libflashsupport                         pkgmgr=dpkg action=install
+    pulseaudio-module-x11                   pkgmgr=dpkg action=install
+    pulseaudio-module-gconf                 pkgmgr=dpkg action=install
+    pulseaudio-module-hal                   pkgmgr=dpkg action=install
+    libk3b2-extracodecs                     pkgmgr=dpkg action=install
+    toolame                                 pkgmgr=dpkg action=install
+    policykit-gnome                         pkgmgr=dpkg action=install
+    libpam-cracklib                         pkgmgr=dpkg action=install
+    amarok-xine                             pkgmgr=dpkg action=install
+    ipod-convenience                        pkgmgr=dpkg action=install
+    xawtv                                   pkgmgr=dpkg action=install
     gstreamer0.10-plugins-ugly              pkgmgr=dpkg action=install
     gstreamer0.10-plugins-ugly-multiverse   pkgmgr=dpkg action=install
     gstreamer0.10-plugins-bad               pkgmgr=dpkg action=install
