@@ -2,42 +2,42 @@
 #control:
 
 packages:
-    vim-gnome               pkgmgr=dpkg cmp=ge version=7 action=install
-    libflashsupport         pkgmgr=dpkg cmp=ge version=1 action=install
-    pulseaudio-module-x11   pkgmgr=dpkg cmp=ge version=1 action=install
-    pulseaudio-module-gconf pkgmgr=dpkg cmp=ge version=1 action=install
-    pulseaudio-module-hal   pkgmgr=dpkg cmp=ge version=1 action=install
-    libk3b2-extracodecs     pkgmgr=dpkg cmp=ge version=1 action=install
-    toolame                 pkgmgr=dpkg cmp=ge version=1 action=install
-    policykit-gnome         pkgmgr=dpkg cmp=ge version=1 action=install
-    libpam-cracklib         pkgmgr=dpkg cmp=ge version=1 action=install
-    amarok-xine             pkgmgr=dpkg cmp=ge version=1 action=install
-    ipod-convenience        pkgmgr=dpkg cmp=ge version=1 action=install
-    xawtv                   pkgmgr=dpkg cmp=ge version=1 action=install
-    gstreamer0.10-plugins-ugly              pkgmgr=dpkg cmp=ge version=1 action=install
-    gstreamer0.10-plugins-ugly-multiverse   pkgmgr=dpkg cmp=ge version=1 action=install
-    gstreamer0.10-plugins-bad               pkgmgr=dpkg cmp=ge version=1 action=install
-    gstreamer0.10-plugins-bad-multiverse    pkgmgr=dpkg cmp=ge version=1 action=install
-    gstreamer0.10-ffmpeg                    pkgmgr=dpkg cmp=ge version=1 action=install
-    gstreamer0.10-plugins-ugly              pkgmgr=dpkg cmp=ge version=1 action=install
-    gstreamer0.10-plugins-ugly-multiverse   pkgmgr=dpkg cmp=ge version=1 action=install
-    gstreamer0.10-plugins-bad               pkgmgr=dpkg cmp=ge version=1 action=install
-    gstreamer0.10-plugins-bad-multiverse    pkgmgr=dpkg cmp=ge version=1 action=install
-    gstreamer0.10-ffmpeg                    pkgmgr=dpkg cmp=ge version=1 action=install
-    samba                                   pkgmgr=dpkg cmp=ge version=1 action=install
-    smbfs                                   pkgmgr=dpkg cmp=ge version=1 action=install
-    devede                                  pkgmgr=dpkg cmp=ge version=1 action=install
-    python-psyco                            pkgmgr=dpkg cmp=ge version=1 action=install
-    mp3gain                                 pkgmgr=dpkg cmp=ge version=1 action=install
-    recode                                  pkgmgr=dpkg cmp=ge version=1 action=install
-    libpam-ck-connector                     pkgmgr=dpkg cmp=ge version=1 action=install
-    pulseaudio-esound-compat                pkgmgr=dpkg cmp=ge version=1 action=install
-    gstreamer0.10-pulseaudio                pkgmgr=dpkg cmp=ge version=1 action=install
-    pulseaudio-utils                        pkgmgr=dpkg cmp=ge version=1 action=install
-    flashplugin-nonfree                     pkgmgr=dpkg cmp=ge version=1 action=install
-    libao-pulse                             pkgmgr=dpkg cmp=ge version=1 action=install
-    libasound2-plugins                      pkgmgr=dpkg cmp=ge version=1 action=install
-    libsdl1.2debian-pulseaudio              pkgmgr=dpkg cmp=ge version=1 action=install
+    vim-gnome               pkgmgr=dpkg action=install
+    libflashsupport         pkgmgr=dpkg action=install
+    pulseaudio-module-x11   pkgmgr=dpkg action=install
+    pulseaudio-module-gconf pkgmgr=dpkg action=install
+    pulseaudio-module-hal   pkgmgr=dpkg action=install
+    libk3b2-extracodecs     pkgmgr=dpkg action=install
+    toolame                 pkgmgr=dpkg action=install
+    policykit-gnome         pkgmgr=dpkg action=install
+    libpam-cracklib         pkgmgr=dpkg action=install
+    amarok-xine             pkgmgr=dpkg action=install
+    ipod-convenience        pkgmgr=dpkg action=install
+    xawtv                   pkgmgr=dpkg action=install
+    gstreamer0.10-plugins-ugly              pkgmgr=dpkg action=install
+    gstreamer0.10-plugins-ugly-multiverse   pkgmgr=dpkg action=install
+    gstreamer0.10-plugins-bad               pkgmgr=dpkg action=install
+    gstreamer0.10-plugins-bad-multiverse    pkgmgr=dpkg action=install
+    gstreamer0.10-ffmpeg                    pkgmgr=dpkg action=install
+    gstreamer0.10-plugins-ugly              pkgmgr=dpkg action=install
+    gstreamer0.10-plugins-ugly-multiverse   pkgmgr=dpkg action=install
+    gstreamer0.10-plugins-bad               pkgmgr=dpkg action=install
+    gstreamer0.10-plugins-bad-multiverse    pkgmgr=dpkg action=install
+    gstreamer0.10-ffmpeg                    pkgmgr=dpkg action=install
+    samba                                   pkgmgr=dpkg action=install
+    smbfs                                   pkgmgr=dpkg action=install
+    devede                                  pkgmgr=dpkg action=install
+    python-psyco                            pkgmgr=dpkg action=install
+    mp3gain                                 pkgmgr=dpkg action=install
+    recode                                  pkgmgr=dpkg action=install
+    libpam-ck-connector                     pkgmgr=dpkg action=install
+    pulseaudio-esound-compat                pkgmgr=dpkg action=install
+    gstreamer0.10-pulseaudio                pkgmgr=dpkg action=install
+    pulseaudio-utils                        pkgmgr=dpkg action=install
+    flashplugin-nonfree                     pkgmgr=dpkg action=install
+    libao-pulse                             pkgmgr=dpkg action=install
+    libasound2-plugins                      pkgmgr=dpkg action=install
+    libsdl1.2debian-pulseaudio              pkgmgr=dpkg action=install
 
 files:
         # hardy has the wrong permissions for this and causes
