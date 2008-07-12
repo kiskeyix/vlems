@@ -1,0 +1,4 @@
+# vi: ft=cfengine :
+shellcommands:
+
+    "/bin/true" ifelapsed=1440

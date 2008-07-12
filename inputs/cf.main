@@ -77,7 +77,7 @@ control:
             )
         IfElapsed = ( 10 )
         ExpireAfter = ( 120 )
-        master_files  = ( /var/cfengine/masterfiles )
+        master_files  = ( /var/cfengine/vlems )
 
         # installable classes allow cfengine to know that a given classes might be defined
         # later:
