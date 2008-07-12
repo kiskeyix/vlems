@@ -1,6 +1,10 @@
 # vi: ft=cfengine :
-control:
-    files:
+#control:
+
+packages:
+    vim-gnome action=install
+
+files:
         # hardy has the wrong permissions for this and causes 
         # dhcp interfaces to not be properly brought up
         /lib/dhcp3-client/call-dhclient-script
