@@ -1,3 +1,22 @@
+control:
+    files:
+        # hardy has the wrong permissions for this and causes 
+        # dhcp interfaces to not be properly brought up
+        /lib/dhcp3-client/call-dhclient-script
+                mode=4754
+                owner=root
+                group=dhcp
+                action=fixall
+                define=needs_networking_restarted
+
+shellcommands:
+    needs_networking_restarted::
+        "/etc/init.d/networking restart"
+
+links:
+    any::
+      /var/cfengine -> /var/lib/cfengine2
+      /usr/bin/esd  -> /usr/bin/esdcompat
 
 # troubleshooting pulseaudio:
 # pulseaudio -k
