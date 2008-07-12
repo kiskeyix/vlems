@@ -1,7 +1,7 @@
 # vi: ft=cfengine :
 control:
 
-    DPKGInstallCommand = ( "/usr/bin/apt-get -y install" )
+    DPKGInstallCommand = ( "/usr/bin/apt-get -y install " )
 
 # shellcommands:
 #     # update our inputs files
