@@ -132,4 +132,3 @@ control:
 
     any::
         apt_bin     = ( /usr/bin/apt-get )
-        apt_conf    = ( ${apt_host_is}.${distro}.list )
