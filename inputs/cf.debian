@@ -6,4 +6,4 @@ control:
 shellcommands:
     # update our inputs files
     debian::
-        "/usr/bin/apt-get update > /dev/null 2>&1" ifelapsed=1440
+        "/usr/bin/apt-get update > /dev/null 2>&1" ifelapsed=1440 timeout=90

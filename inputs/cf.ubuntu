@@ -3,7 +3,7 @@
 
 packages:
     vim-gnome                               pkgmgr=dpkg action=install
-    libflashsupport                         pkgmgr=dpkg action=install
+    #libflashsupport                         pkgmgr=dpkg action=install
     pulseaudio-module-x11                   pkgmgr=dpkg action=install
     pulseaudio-module-gconf                 pkgmgr=dpkg action=install
     pulseaudio-module-hal                   pkgmgr=dpkg action=install
@@ -35,7 +35,7 @@ packages:
     pulseaudio-esound-compat                pkgmgr=dpkg action=install
     gstreamer0.10-pulseaudio                pkgmgr=dpkg action=install
     pulseaudio-utils                        pkgmgr=dpkg action=install
-    flashplugin-nonfree                     pkgmgr=dpkg action=install
+    #flashplugin-nonfree                     pkgmgr=dpkg action=install
     libao-pulse                             pkgmgr=dpkg action=install
     libasound2-plugins                      pkgmgr=dpkg action=install
     libsdl1.2debian-pulseaudio              pkgmgr=dpkg action=install
