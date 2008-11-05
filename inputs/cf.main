@@ -61,7 +61,6 @@ control:
             module:mailforroot
             module:daylight_savings
             shellcommands
-            resolve
             processes 
             tidy
             mountall            # mount filesystems in fstab
