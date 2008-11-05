@@ -11,7 +11,6 @@ packages:
     toolame                                 pkgmgr=dpkg action=install
     policykit-gnome                         pkgmgr=dpkg action=install
     libpam-cracklib                         pkgmgr=dpkg action=install
-    amarok-xine                             pkgmgr=dpkg action=install
     # TODO how do i prevent this package from being interactive while installing?
     #ipod-convenience                        pkgmgr=dpkg action=install
     xawtv                                   pkgmgr=dpkg action=install
@@ -39,6 +38,12 @@ packages:
     libao-pulse                             pkgmgr=dpkg action=install
     libasound2-plugins                      pkgmgr=dpkg action=install
     libsdl1.2debian-pulseaudio              pkgmgr=dpkg action=install
+
+    ubuntu_hardy::
+    amarok-xine                             pkgmgr=dpkg action=install
+    
+    #ubuntu_intrepid::
+    #amarok-engine-xine                      pkgmgr=dpkg action=install
 
 files:
         # hardy has the wrong permissions for this and causes
