@@ -40,12 +40,13 @@ packages:
     libsdl1.2debian-pulseaudio              pkgmgr=dpkg action=install
 
     ubuntu_hardy::
-    amarok-xine                             pkgmgr=dpkg action=install
+        amarok-xine                             pkgmgr=dpkg action=install
     
     #ubuntu_intrepid::
-    #amarok-engine-xine                      pkgmgr=dpkg action=install
+    #    amarok-engine-xine                      pkgmgr=dpkg action=install
 
 files:
+    ubuntu_hardy::
         # hardy has the wrong permissions for this and causes
         # dhcp interfaces to not be properly brought up
         /lib/dhcp3-client/call-dhclient-script
