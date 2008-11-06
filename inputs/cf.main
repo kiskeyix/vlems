@@ -16,10 +16,12 @@ control:
         # update.conf also defines this same variable. we just makes sure 
         # that its updated correctly here
         AllowRedefinitionOf = ( 
-            cfengine_server domain
             pkg_base_url pkg_host_is pkg_bin pkg_bin distro pkg_mgr 
             AddInstallable  cfrunCommand
             )
+
+        Syslog = ( on )
+
         #ChecksumDatabase = ( /var/cfengine/checksum.db )
         # set this to true when the database needs updating for valid reasons
         ChecksumUpdates = ( false )
@@ -32,13 +34,6 @@ control:
 
     debian::
         cfrunCommand = ( /var/lib/cfengine2/bin/cfagent )
-
-    !CfengineServers::
-        cfengine_server = ( 66.114.86.65 )
-
-    CfengineServers::
-        Syslog = ( on )
-        cfengine_server = ( localhost )
 
     any::
         LogAllConnections = ( true )

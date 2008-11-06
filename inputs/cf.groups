@@ -9,10 +9,6 @@ groups:
     #
     # Define some groups
     #
-    
-    # TODO find a way to re-use that variable here. can't use ${cfengine_server}
-    # we are not relying on DNS resolution because for DMZ boxes this creates problems
-    CfengineServers = ( wiz 10_1_1_6 2007_a_b__6 www_kiskeyix_org 66_114_86_65  )
 
     # hosts which should be running ssh:
     sshservers = ( unix )
