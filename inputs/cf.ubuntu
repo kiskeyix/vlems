@@ -40,8 +40,11 @@ packages:
     libsdl1.2debian-pulseaudio              pkgmgr=dpkg action=install
 
     ubuntu_hardy::
-        amarok-xine                             pkgmgr=dpkg action=install
-    
+        amarok-xine                         pkgmgr=dpkg action=install
+   
+    32_bit::
+        adobe-flashplugin                   pkgmgr=dpkg action=install
+
     #ubuntu_intrepid::
     #    amarok-engine-xine                      pkgmgr=dpkg action=install
 
