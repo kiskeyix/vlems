@@ -27,7 +27,7 @@ packages:
     samba                                   pkgmgr=dpkg action=install
     smbfs                                   pkgmgr=dpkg action=install
     devede                                  pkgmgr=dpkg action=install
-    python-psyco                            pkgmgr=dpkg action=install
+    #python-psyco                            pkgmgr=dpkg action=install
     mp3gain                                 pkgmgr=dpkg action=install
     recode                                  pkgmgr=dpkg action=install
     libpam-ck-connector                     pkgmgr=dpkg action=install
