@@ -38,10 +38,11 @@ packages:
     libao-pulse                             pkgmgr=dpkg action=install
     libasound2-plugins                      pkgmgr=dpkg action=install
     libsdl1.2debian-pulseaudio              pkgmgr=dpkg action=install
+    uswsusp                                 pkgmgr=dpkg action=install
 
     ubuntu_hardy::
         amarok-xine                         pkgmgr=dpkg action=install
-   
+
     32_bit::
         adobe-flashplugin                   pkgmgr=dpkg action=install
 
@@ -68,6 +69,14 @@ links:
       /var/cfengine -> /var/lib/cfengine2
       #/usr/bin/esd  -> /usr/bin/esdcompat
       /usr/bin/esd  -> esdcompat
+
+editfiles:
+    # LP Bug 246053. Luis Mondesi <lmondesi@fotolog.com>
+    ubuntu_hardy::
+        { /etc/pm/config.d/local
+            AutoCreate
+            AppendIfNoSuchLine "S2DISK_BIN=/sbin/s2disk"
+        }
 
 # troubleshooting pulseaudio:
 # pulseaudio -k
