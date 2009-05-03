@@ -51,6 +51,7 @@ packages:
     
     ubuntu_jaunty::
          amarok                             pkgmgr=dpkg action=install
+         libao2                             pkgmgr=dpkg action=install
 
 files:
     ubuntu_hardy::
