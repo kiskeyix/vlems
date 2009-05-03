@@ -35,19 +35,22 @@ packages:
     gstreamer0.10-pulseaudio                pkgmgr=dpkg action=install
     pulseaudio-utils                        pkgmgr=dpkg action=install
     #flashplugin-nonfree                     pkgmgr=dpkg action=install
-    libao-pulse                             pkgmgr=dpkg action=install
     libasound2-plugins                      pkgmgr=dpkg action=install
     libsdl1.2debian-pulseaudio              pkgmgr=dpkg action=install
     uswsusp                                 pkgmgr=dpkg action=install
 
     ubuntu_hardy::
         amarok-xine                         pkgmgr=dpkg action=install
+        libao-pulse                         pkgmgr=dpkg action=install
 
     32_bit::
         adobe-flashplugin                   pkgmgr=dpkg action=install
 
     #ubuntu_intrepid::
     #    amarok-engine-xine                      pkgmgr=dpkg action=install
+    
+    ubuntu_jaunty::
+         amarok                             pkgmgr=dpkg action=install
 
 files:
     ubuntu_hardy::
