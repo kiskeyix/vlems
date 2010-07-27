@@ -7,7 +7,6 @@ packages:
     pulseaudio-module-x11                   pkgmgr=dpkg action=install
     pulseaudio-module-gconf                 pkgmgr=dpkg action=install
     pulseaudio-module-hal                   pkgmgr=dpkg action=install
-    libk3b2-extracodecs                     pkgmgr=dpkg action=install
     toolame                                 pkgmgr=dpkg action=install
     policykit-gnome                         pkgmgr=dpkg action=install
     libpam-cracklib                         pkgmgr=dpkg action=install
@@ -42,13 +41,11 @@ packages:
     ubuntu_hardy::
         amarok-xine                         pkgmgr=dpkg action=install
         libao-pulse                         pkgmgr=dpkg action=install
+        libk3b2-extracodecs                 pkgmgr=dpkg action=install
 
     32_bit::
         adobe-flashplugin                   pkgmgr=dpkg action=install
 
-    #ubuntu_intrepid::
-    #    amarok-engine-xine                      pkgmgr=dpkg action=install
-    
     ubuntu_jaunty::
          amarok                             pkgmgr=dpkg action=install
          libao2                             pkgmgr=dpkg action=install
@@ -82,46 +79,3 @@ editfiles:
             AppendIfNoSuchLine "S2DISK_BIN=/sbin/s2disk"
         }
 
-# troubleshooting pulseaudio:
-# pulseaudio -k
-# pulseaudio -vv
-
-# install packages:
-# libflashsupport pulseaudio-module-x11 pulseaudio-module-gconf pulseaudio-module-hal libk3b2-extracodecs toolame policykit-gnome libpam-cracklib amarok-xine ipod-convenience xawtv  gstreamer0.10-plugins-ugly gstreamer0.10-plugins-ugly-multiverse gstreamer0.10-plugins-bad gstreamer0.10-plugins-bad-multiverse gstreamer0.10-ffmpeg gstreamer0.10-plugins-ugly gstreamer0.10-plugins-ugly-multiverse gstreamer0.10-plugins-bad gstreamer0.10-plugins-bad-multiverse gstreamer0.10-ffmpeg samba smbfs devede python-psyco  mp3gain recode libpam-ck-connector pulseaudio-esound-compat gstreamer0.10-pulseaudio pulseaudio-utils flashplugin-nonfree libao-pulse libasound2-plugins libsdl1.2debian-pulseaudio
-
-# 64bit:
-# icedtea-gcjwebplugin
-
-# end user needs to use audiosink pulsesink:
-# gconftool -t string --set /system/gstreamer/0.10/default/audiosink pulsesink
-# gconftool -t string --set /system/gstreamer/0.10/default/audiosrc pulsesrc
-
-# /etc/asound.conf
-# http://www.pulseaudio.org/wiki/PerfectSetup
-# pcm.pulse {
-#     type pulse
-# }
-# ctl.pulse {
-#     type pulse
-# }
-# pcm.!default {
-#     type pulse
-# }
-# ctl.!default {
-#     type pulse
-# }
-
-# /etc/libao.conf
-# default_driver=pulse
-
-# /etc/mplayer/mplayer.conf
-# ao=pulse,alsa,
-
-# /etc/profile
-# export SDL_AUDIODRIVER=pulse
-
-# links:
-#/usr/bin/esd -> esdcompat
-
-# launch skype with:
-# pasuspender skype or padsp skype
