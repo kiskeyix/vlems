@@ -72,7 +72,7 @@ links:
       /usr/bin/esd  -> esdcompat
 
 editfiles:
-    # LP Bug 246053. Luis Mondesi <lmondesi@fotolog.com>
+    # LP Bug 246053. Luis Mondesi <lemsx1 at gmail dot com>
     ubuntu_hardy::
         { /etc/pm/config.d/local
             AutoCreate
