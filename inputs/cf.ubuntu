@@ -2,41 +2,20 @@
 #control:
 
 packages:
-    vim-gnome                               pkgmgr=dpkg action=install
-    twolame                                 pkgmgr=dpkg action=install
-    libpam-cracklib                         pkgmgr=dpkg action=install
-    xawtv                                   pkgmgr=dpkg action=install
-    samba                                   pkgmgr=dpkg action=install
-    smbfs                                   pkgmgr=dpkg action=install
-    recode                                  pkgmgr=dpkg action=install
+    cifs-utils                              pkgmgr=dpkg action=install
+    libasound2-plugins                      pkgmgr=dpkg action=install
     libpam-ck-connector                     pkgmgr=dpkg action=install
+    libpam-cracklib                         pkgmgr=dpkg action=install
     pulseaudio-esound-compat                pkgmgr=dpkg action=install
     pulseaudio-utils                        pkgmgr=dpkg action=install
-    libasound2-plugins                      pkgmgr=dpkg action=install
+    recode                                  pkgmgr=dpkg action=install
+    samba                                   pkgmgr=dpkg action=install
+    twolame                                 pkgmgr=dpkg action=install
     uswsusp                                 pkgmgr=dpkg action=install
-
-    ubuntu_hardy::
-        amarok-xine                         pkgmgr=dpkg action=install
-        libao-pulse                         pkgmgr=dpkg action=install
-        libk3b2-extracodecs                 pkgmgr=dpkg action=install
-
-    32_bit::
-        adobe-flashplugin                   pkgmgr=dpkg action=install
-
-    ubuntu_jaunty::
-         amarok                             pkgmgr=dpkg action=install
-         libao2                             pkgmgr=dpkg action=install
+    vim-gnome                               pkgmgr=dpkg action=install
+    xawtv                                   pkgmgr=dpkg action=install
 
 files:
-    ubuntu_hardy::
-        # hardy has the wrong permissions for this and causes
-        # dhcp interfaces to not be properly brought up
-        /lib/dhcp3-client/call-dhclient-script
-                mode=4754
-                owner=root
-                group=dhcp
-                action=fixall
-                define=needs_networking_restarted
 
 shellcommands:
     needs_networking_restarted::
@@ -49,10 +28,4 @@ links:
       /usr/bin/esd  -> esdcompat
 
 editfiles:
-    # LP Bug 246053. Luis Mondesi <lemsx1 at gmail dot com>
-    ubuntu_hardy::
-        { /etc/pm/config.d/local
-            AutoCreate
-            AppendIfNoSuchLine "S2DISK_BIN=/sbin/s2disk"
-        }
 
